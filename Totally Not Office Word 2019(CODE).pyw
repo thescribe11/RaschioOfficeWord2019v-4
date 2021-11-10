@@ -18,7 +18,7 @@ class MainGui():
         self.root.configure(background="#E8E0E0")
         self.mainFrame = tk.Frame(self.root, width=680, height=600)
         self.mainFrame.grid(row=1, column=1, padx=50, pady=30)
-        self.root.title("Raschio Office Word 2019")
+        self.root.title("Totally Not Office Word 2019")
         
         self.mainFrame.columnconfigure(0,weight=10)   # Makes frame that holds self.texter.
         self.mainFrame.rowconfigure(0,weight=10)
