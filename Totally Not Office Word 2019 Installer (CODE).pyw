@@ -13,7 +13,7 @@ class main():
 		self.filename = f"C:\\Users\\{self.login_name}\\Documents"
 		self.stage = 0
 		self.root = tk.Tk()
-		self.root.title("Raschio Office Word 2019")
+		self.root.title("Totally Not Office Word 2019")
 		self.root.configure(background="#87C6F4")
 		self.root.update()
 		self.main_screen = tk.Frame(self.root, width=66, background="#87C6F4")
@@ -30,14 +30,14 @@ class main():
 		### TODO Set the explanation text.
 		self.explanation_label = tk.Label(self.main_screen,text = 
 """
-    Please choose a location to install Raschio Office Word 2019.       
+Please choose a location to install Totally Not Office Word 2019.       
 When you're ready to install, just click the "Next" button.
 This might take a few moments.      
 """, font="Times 14 bold", background="#87C6F4")
 		self.explanation_label.grid(row=0, column=0, sticky='nsew')
 		self.to_change = tk.Entry(self.main_screen, width=30)		
 		self.to_change.grid()
-		self.filename += "\\Raschio Office Word 2019.exe"
+		self.filename += "\\TotallyNotOfficeWord2019.exe"
 
 		self.to_change.insert(0, str(self.filename))
 		self.to_change.grid(row = 1, column = 0)   #30
@@ -49,7 +49,7 @@ This might take a few moments.
 		f.close()
 		self.next['state'] = 'disabled'
 		self.next.update()
-		r = requests.get("https://raw.github.com/thescribe11/RaschioOfficeWord2019v-4/master/RaschioOfficeWord2019.exe", stream=True)
+		r = requests.get("https://raw.github.com/thescribe11/RaschioOfficeWord2019v-4/master/TotallyNotOfficeWord2019.exe", stream=True)
 		with open(self.filename, "ab") as f:
 			valuer = 0
 			for chunk in r.iter_content( chunk_size=90000 ):
@@ -62,13 +62,13 @@ This might take a few moments.
 		self.main_screen.destroy()
 		self.main_screen = tk.Frame(self.root, width=66, background="#87C6F4")
 		self.main_screen.grid(row = 0, column = 1, sticky='nsew')
-		self.next_label = tk.Label(self.main_screen, text="\nThank you for installing Raschio Office Word 2019.\nClick 'Next' to close the installer.\n", font="Times 14 bold", background="#87C6F4")
+		self.next_label = tk.Label(self.main_screen, text="\nThank you for installing Totally Not Office Word 2019.\nClick 'Next' to close the installer.\n", font="Times 14 bold", background="#87C6F4")
 		self.next_label.grid(sticky='nsew')		
 	def introduction(self):
 		self.introlabel = tk.Label(self.main_screen, text = 
 		"""Hello.
 
-Welcome to the Installation Wizard for Raschio Office Word 2019.   
+Welcome to the Installation Wizard for Totally Not Office Word 2019.   
 To install, click "Next" and follow instructions.    
 You may cancel installation by clicking "cancel" at any point .    
 	
@@ -80,7 +80,7 @@ You may cancel installation by clicking "cancel" at any point .
 		self.to_change.destroy()
 		self.explanation_label.destroy()
 		
-		self.explanation_2 = tk.Label(self.main_screen, text="\n\n      Installing Raschio Office Word 2019...    \n", font="Times 14 bold", background="#87C6F4")
+		self.explanation_2 = tk.Label(self.main_screen, text="\n\n      Installing Totally Not Office Word 2019...    \n", font="Times 14 bold", background="#87C6F4")
 		self.explanation_2.grid(sticky='nswe')
 
 		self.progress = ttk.Progressbar(self.main_screen, orient='horizontal', length=500, mode='determinate')
